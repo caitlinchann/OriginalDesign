@@ -1,18 +1,22 @@
 int x = 0;
 int x2 = 0;
 int x3 = 0;
+Star[] nightSky = new Star[200];
 
 void setup()
 {
   size(600,300);
+  for(int i = 0; i < nightSky.length; i++)
+  {
+    nightSky[i] = new Star();
+  }
 }
 void draw()
 {
  background(0);
- for(int i = 0; i < 100; i++)
+ for(int i = 0; i < nightSky.length; i++)
  {
-   Star bob = new Star();
-   bob.show(); 
+   nightSky[i].show();
  }
  drawSun();
  drawMercury();
